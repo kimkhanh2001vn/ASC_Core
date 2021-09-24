@@ -1,0 +1,8 @@
+D:\Frameword core\ASC\ASC.Utilities\bin\Debug\ASC.Utilities.dll
+D:\Frameword core\ASC\ASC.Utilities\bin\Debug\ASC.Utilities.pdb
+D:\Frameword core\ASC\ASC.Utilities\bin\Debug\Newtonsoft.Json.dll
+D:\Frameword core\ASC\ASC.Utilities\bin\Debug\Newtonsoft.Json.xml
+D:\Frameword core\ASC\ASC.Utilities\obj\Debug\ASC.Utilities.csproj.CoreCompileInputs.cache
+D:\Frameword core\ASC\ASC.Utilities\obj\Debug\ASC.Utilities.csproj.CopyComplete
+D:\Frameword core\ASC\ASC.Utilities\obj\Debug\ASC.Utilities.dll
+D:\Frameword core\ASC\ASC.Utilities\obj\Debug\ASC.Utilities.pdb

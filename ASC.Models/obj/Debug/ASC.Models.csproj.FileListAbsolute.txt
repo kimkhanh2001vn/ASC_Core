@@ -1,0 +1,13 @@
+D:\Frameword core\ASC\ASC.Models\bin\Debug\ASC.Models.dll
+D:\Frameword core\ASC\ASC.Models\bin\Debug\ASC.Models.pdb
+D:\Frameword core\ASC\ASC.Models\bin\Debug\Microsoft.Azure.KeyVault.Core.dll
+D:\Frameword core\ASC\ASC.Models\bin\Debug\Microsoft.WindowsAzure.Storage.dll
+D:\Frameword core\ASC\ASC.Models\bin\Debug\Newtonsoft.Json.dll
+D:\Frameword core\ASC\ASC.Models\bin\Debug\Microsoft.Azure.KeyVault.Core.xml
+D:\Frameword core\ASC\ASC.Models\bin\Debug\Microsoft.WindowsAzure.Storage.pdb
+D:\Frameword core\ASC\ASC.Models\bin\Debug\Microsoft.WindowsAzure.Storage.xml
+D:\Frameword core\ASC\ASC.Models\bin\Debug\Newtonsoft.Json.xml
+D:\Frameword core\ASC\ASC.Models\obj\Debug\ASC.Models.csproj.CoreCompileInputs.cache
+D:\Frameword core\ASC\ASC.Models\obj\Debug\ASC.Models.csproj.CopyComplete
+D:\Frameword core\ASC\ASC.Models\obj\Debug\ASC.Models.dll
+D:\Frameword core\ASC\ASC.Models\obj\Debug\ASC.Models.pdb
