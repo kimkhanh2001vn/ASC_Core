@@ -1,0 +1,10 @@
+D:\Frameword core\ASC\ASC.Utilities\bin\Debug\netcoreapp2.1\ASC.Utilities.deps.json
+D:\Frameword core\ASC\ASC.Utilities\bin\Debug\netcoreapp2.1\ASC.Utilities.dll
+D:\Frameword core\ASC\ASC.Utilities\bin\Debug\netcoreapp2.1\ASC.Utilities.pdb
+D:\Frameword core\ASC\ASC.Utilities\obj\Debug\netcoreapp2.1\ASC.Utilities.csproj.AssemblyReference.cache
+D:\Frameword core\ASC\ASC.Utilities\obj\Debug\netcoreapp2.1\ASC.Utilities.GeneratedMSBuildEditorConfig.editorconfig
+D:\Frameword core\ASC\ASC.Utilities\obj\Debug\netcoreapp2.1\ASC.Utilities.AssemblyInfoInputs.cache
+D:\Frameword core\ASC\ASC.Utilities\obj\Debug\netcoreapp2.1\ASC.Utilities.AssemblyInfo.cs
+D:\Frameword core\ASC\ASC.Utilities\obj\Debug\netcoreapp2.1\ASC.Utilities.csproj.CoreCompileInputs.cache
+D:\Frameword core\ASC\ASC.Utilities\obj\Debug\netcoreapp2.1\ASC.Utilities.dll
+D:\Frameword core\ASC\ASC.Utilities\obj\Debug\netcoreapp2.1\ASC.Utilities.pdb

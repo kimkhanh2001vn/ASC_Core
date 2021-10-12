@@ -1,0 +1,15 @@
+D:\Frameword core\ASC\ASC.DataAccess\bin\Debug\netcoreapp2.1\ASC.DataAccess.deps.json
+D:\Frameword core\ASC\ASC.DataAccess\bin\Debug\netcoreapp2.1\ASC.DataAccess.dll
+D:\Frameword core\ASC\ASC.DataAccess\bin\Debug\netcoreapp2.1\ASC.DataAccess.pdb
+D:\Frameword core\ASC\ASC.DataAccess\bin\Debug\netcoreapp2.1\ASC.Models.dll
+D:\Frameword core\ASC\ASC.DataAccess\bin\Debug\netcoreapp2.1\ASC.Utilities.dll
+D:\Frameword core\ASC\ASC.DataAccess\bin\Debug\netcoreapp2.1\ASC.Models.pdb
+D:\Frameword core\ASC\ASC.DataAccess\bin\Debug\netcoreapp2.1\ASC.Utilities.pdb
+D:\Frameword core\ASC\ASC.DataAccess\obj\Debug\netcoreapp2.1\ASC.DataAccess.csproj.AssemblyReference.cache
+D:\Frameword core\ASC\ASC.DataAccess\obj\Debug\netcoreapp2.1\ASC.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\Frameword core\ASC\ASC.DataAccess\obj\Debug\netcoreapp2.1\ASC.DataAccess.AssemblyInfoInputs.cache
+D:\Frameword core\ASC\ASC.DataAccess\obj\Debug\netcoreapp2.1\ASC.DataAccess.AssemblyInfo.cs
+D:\Frameword core\ASC\ASC.DataAccess\obj\Debug\netcoreapp2.1\ASC.DataAccess.csproj.CoreCompileInputs.cache
+D:\Frameword core\ASC\ASC.DataAccess\obj\Debug\netcoreapp2.1\ASC.DataAccess.csproj.CopyComplete
+D:\Frameword core\ASC\ASC.DataAccess\obj\Debug\netcoreapp2.1\ASC.DataAccess.dll
+D:\Frameword core\ASC\ASC.DataAccess\obj\Debug\netcoreapp2.1\ASC.DataAccess.pdb

@@ -1,0 +1,10 @@
+D:\Frameword core\ASC\ASC.Models\bin\Debug\netcoreapp2.1\ASC.Models.deps.json
+D:\Frameword core\ASC\ASC.Models\bin\Debug\netcoreapp2.1\ASC.Models.dll
+D:\Frameword core\ASC\ASC.Models\bin\Debug\netcoreapp2.1\ASC.Models.pdb
+D:\Frameword core\ASC\ASC.Models\obj\Debug\netcoreapp2.1\ASC.Models.csproj.AssemblyReference.cache
+D:\Frameword core\ASC\ASC.Models\obj\Debug\netcoreapp2.1\ASC.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\Frameword core\ASC\ASC.Models\obj\Debug\netcoreapp2.1\ASC.Models.AssemblyInfoInputs.cache
+D:\Frameword core\ASC\ASC.Models\obj\Debug\netcoreapp2.1\ASC.Models.AssemblyInfo.cs
+D:\Frameword core\ASC\ASC.Models\obj\Debug\netcoreapp2.1\ASC.Models.csproj.CoreCompileInputs.cache
+D:\Frameword core\ASC\ASC.Models\obj\Debug\netcoreapp2.1\ASC.Models.dll
+D:\Frameword core\ASC\ASC.Models\obj\Debug\netcoreapp2.1\ASC.Models.pdb

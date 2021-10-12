@@ -1,0 +1,6 @@
+D:\Frameword core\ASC\ASC.WebCore\obj\Debug\net5.0\ASC.WebCore.csproj.AssemblyReference.cache
+D:\Frameword core\ASC\ASC.WebCore\obj\Debug\net5.0\ASC.WebCore.GeneratedMSBuildEditorConfig.editorconfig
+D:\Frameword core\ASC\ASC.WebCore\obj\Debug\net5.0\ASC.WebCore.AssemblyInfoInputs.cache
+D:\Frameword core\ASC\ASC.WebCore\obj\Debug\net5.0\ASC.WebCore.AssemblyInfo.cs
+D:\Frameword core\ASC\ASC.WebCore\obj\Debug\net5.0\ASC.WebCore.csproj.CoreCompileInputs.cache
+D:\Frameword core\ASC\ASC.WebCore\obj\Debug\net5.0\ASC.WebCore.MvcApplicationPartsAssemblyInfo.cache

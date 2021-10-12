@@ -1,5 +1,9 @@
-﻿using ASC.WebCore.Models;
+﻿using ASC.Models.Configuration;
+using ASC.Utilities;
+using ASC.WebCore.Models;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -10,15 +14,26 @@ namespace ASC.WebCore.Controllers
 {
     public class HomeController : Controller
     {
+        private IOptions<ApplicationSettings> _settings;
+        public HomeController(IOptions<ApplicationSettings> settings)
+        {
+            _settings = settings;
+        }
+        //[FromServices] IEmailSender emailSender
         public IActionResult Index()
         {
+            //set sesion
+            HttpContext.Session.SetSession("Text", _settings.Value);
+            //get session
+            HttpContext.Session.GetSession<ApplicationSettings>("Test");
+            // Usage of IOptions
+            ViewBag.Title = _settings.Value.ApplicationTitle;
+
+            var emailService = this.HttpContext.RequestServices.GetService(typeof(IEmailSender)) as IEmailSender;
             return View();
         }
-
-        public IActionResult About()
+        public IActionResult About(Customer customer)
         {
-            ViewData["Message"] = "Your application description page.";
-
             return View();
         }
 

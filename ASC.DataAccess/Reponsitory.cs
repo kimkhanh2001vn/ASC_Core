@@ -1,12 +1,10 @@
 ﻿using ASC.DataAccess.Interfaces;
-using ASC.Models;
 using ASC.Models.BaseTypes;
 using ASC.Utilities;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Table;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -32,6 +30,7 @@ namespace ASC.DataAccess
             var entityToInsert = entity as BaseEntity;
             entityToInsert.CreateDate = DateTime.UtcNow;
             entityToInsert.UpdateDate = DateTime.UtcNow;
+
             TableOperation insertOperation = TableOperation.Insert(entity);
             var result = await ExecuteAsync(insertOperation);
             return result.Result as T;
@@ -40,6 +39,7 @@ namespace ASC.DataAccess
         {
             var entityToUpdate = entity as BaseEntity;
             entityToUpdate.UpdateDate = DateTime.UtcNow;
+
             TableOperation updateOperation = TableOperation.Replace(entity);
             var result = await ExecuteAsync(updateOperation);
             return result.Result as T;
@@ -107,6 +107,7 @@ namespace ASC.DataAccess
         private async Task<Action> CreateRollbackAction(TableOperation operation)
         {
             if (operation.OperationType == TableOperationType.Retrieve) return null;
+
             var tableEntity = operation.Entity;
             var cloudTable = storageTable;
             switch (operation.OperationType)
@@ -165,8 +166,7 @@ namespace ASC.DataAccess
             var insertOperation = TableOperation.Replace(entity);
             await table.ExecuteAsync(insertOperation);
         }
-        private async Task UndoReplaceOperation(CloudTable table, ITableEntity originalEntity,
-        ITableEntity newEntity)
+        private async Task UndoReplaceOperation(CloudTable table, ITableEntity originalEntity, ITableEntity newEntity)
         {
             if (originalEntity != null)
             {

@@ -1,8 +1,14 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using ASC.DataAccess;
+using ASC.DataAccess.Interfaces;
+using ASC.Models.Configuration;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
+
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -30,9 +36,21 @@ namespace ASC.WebCore
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-
-
+            services.Configure<ApplicationSettings>(Configuration.GetSection("AppSettings"));
+            services.AddOptions();
+            services.AddSession();
+            // Add framework services.
+            //services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            //services.AddIdentity<ApplicationUser, IdentityRole>()
+            //    .AddEntityFrameworkStores<ApplicationDbContext>()
+            //    .AddDefaultTokenProviders();
+            services.AddDistributedMemoryCache();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddApplicationInsightsTelemetry();
+
+            // Add application services.
+            //services.AddTransient<IEmailSender, AuthMessageSender>();
+            //services.AddTransient<ISmsSender, AuthMessageSender>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,7 +65,7 @@ namespace ASC.WebCore
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
-
+            app.UseSession();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();

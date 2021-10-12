@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace ASC.WebCore
@@ -18,6 +19,7 @@ namespace ASC.WebCore
     {
         public static async Task Main(string[] args)
         {
+            CreateWebHostBuilder(args).Build().Run();
             // Azure Storage Account and Table Service Instance
             CloudStorageAccount storageAccount;
             CloudTableClient tableClient;
@@ -26,7 +28,7 @@ namespace ASC.WebCore
             //create the table 'book', if it not exists
             tableClient = storageAccount.CreateCloudTableClient();
             CloudTable table = tableClient.GetTableReference("Books");
-            table.CreateIfNotExistsAsync();
+            await table.CreateIfNotExistsAsync();
             //create a book instance
             Book books = new Book()
             {
@@ -43,7 +45,7 @@ namespace ASC.WebCore
             // insert and excute operations
 
             TableOperation insertOperation = TableOperation.Insert(books);
-            table.ExecuteAsync(insertOperation);
+            await table.ExecuteAsync(insertOperation);
             Console.ReadLine();
             using (var _unitOfWork = new UnitOfWork("UseDevelopmentStorage=true;"))
             {
@@ -85,11 +87,48 @@ namespace ASC.WebCore
                 // throw new Exception();
                 _unitOfWork.CommitTransaction();
             }
-            CreateWebHostBuilder(args).Build().Run();
+            
         }
 
-        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
+        public static IWebHostBuilder CreateWebHostBuilder(string[] args) 
+        {
+            var buider = new WebHostBuilder()
+                .UseKestrel()
+                .UseStartup<Startup>()
+                .UseContentRoot(Directory.GetCurrentDirectory())
+                .ConfigureAppConfiguration((hostingContext, config) =>
+                {
+                    var env = hostingContext.HostingEnvironment;
+                    config.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                    .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true);
+                    if (env.IsDevelopment())
+                    {
+                        var appAssembly = Assembly.Load(new AssemblyName(env.ApplicationName));
+                        if (appAssembly != null)
+                        {
+                            config.AddUserSecrets(appAssembly, optional: true);
+                        }
+                    }
+                    config.AddEnvironmentVariables();
+                    if (args != null)
+                    {
+                        config.AddCommandLine(args);
+                    }
+                })
+                .ConfigureLogging((hostingContext, logging) =>
+                {
+                    logging.AddConfiguration(hostingContext.Configuration.GetSection("Logging"));
+                    logging.AddConsole();
+                    logging.AddDebug();
+                })
+                .UseIISIntegration()
+                .UseDefaultServiceProvider((context, options) =>
+                {
+                    options.ValidateScopes = context.HostingEnvironment.IsDevelopment();
+                });
+            return buider;
+        }
+        public IConfiguration configuration { get; }
+           
     }
 }

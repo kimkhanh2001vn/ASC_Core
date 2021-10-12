@@ -1,0 +1,109 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.1": {
+      "ASC.Utilities/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "6.0.0-preview.4.21253.5",
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "runtime": {
+          "ASC.Utilities.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Http.Features/6.0.0-preview.4.21253.5": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "6.0.0-preview.4.21253.7",
+          "System.IO.Pipelines": "6.0.0-preview.4.21253.7"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.25305"
+          }
+        }
+      },
+      "Microsoft.Extensions.Primitives/6.0.0-preview.4.21253.7": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0-preview.4.21253.7"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.25307"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.1": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.1.25517"
+          }
+        }
+      },
+      "System.IO.Pipelines/6.0.0-preview.4.21253.7": {
+        "runtime": {
+          "lib/netstandard2.0/System.IO.Pipelines.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.25307"
+          }
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/6.0.0-preview.4.21253.7": {
+        "runtime": {
+          "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.25307"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ASC.Utilities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.AspNetCore.Http.Features/6.0.0-preview.4.21253.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-R3MUGcafdytxU9Bv5PWy46MPlHtPLgjCX9ay+Y7VPyvaxtpCijz6tMBUPletOUeAcmyYpwBgWU1FwdyuZn0n8w==",
+      "path": "microsoft.aspnetcore.http.features/6.0.0-preview.4.21253.5",
+      "hashPath": "microsoft.aspnetcore.http.features.6.0.0-preview.4.21253.5.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Primitives/6.0.0-preview.4.21253.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6/lDuT2adENTB3xv33imDINOlk12FjhNagH2LCZ0+dc3UNke05DekLz9kSKVQufcvcWbNzzuxO5ucMJ94qQdBQ==",
+      "path": "microsoft.extensions.primitives/6.0.0-preview.4.21253.7",
+      "hashPath": "microsoft.extensions.primitives.6.0.0-preview.4.21253.7.nupkg.sha512"
+    },
+    "Newtonsoft.Json/13.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
+      "path": "newtonsoft.json/13.0.1",
+      "hashPath": "newtonsoft.json.13.0.1.nupkg.sha512"
+    },
+    "System.IO.Pipelines/6.0.0-preview.4.21253.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vFgm2rr53rp46mFmO+ihwVf9zOZu4sA11ULmCbmvrYEG3XR45ql1CYBSEEsntMQeZG0B/qiOOifnLTxB5G1C0A==",
+      "path": "system.io.pipelines/6.0.0-preview.4.21253.7",
+      "hashPath": "system.io.pipelines.6.0.0-preview.4.21253.7.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/6.0.0-preview.4.21253.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rOTMSKPvs0Wgmne/DaGxFUiD4gcvzzEUvgPtRbJ3MQHVK2wIgNlQUyMPt8Ny6RwzNo5odbfDpwNZy4cfkkc7mA==",
+      "path": "system.runtime.compilerservices.unsafe/6.0.0-preview.4.21253.7",
+      "hashPath": "system.runtime.compilerservices.unsafe.6.0.0-preview.4.21253.7.nupkg.sha512"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+D:\Frameword core\ASC\ASC.xUnitTest\obj\Debug\netcoreapp2.1\ASC.xUnitTest.csproj.AssemblyReference.cache
+D:\Frameword core\ASC\ASC.xUnitTest\obj\Debug\netcoreapp2.1\ASC.xUnitTest.GeneratedMSBuildEditorConfig.editorconfig
+D:\Frameword core\ASC\ASC.xUnitTest\obj\Debug\netcoreapp2.1\ASC.xUnitTest.AssemblyInfoInputs.cache
+D:\Frameword core\ASC\ASC.xUnitTest\obj\Debug\netcoreapp2.1\ASC.xUnitTest.AssemblyInfo.cs
+D:\Frameword core\ASC\ASC.xUnitTest\obj\Debug\netcoreapp2.1\ASC.xUnitTest.csproj.CoreCompileInputs.cache
+D:\Frameword core\ASC\ASC.xUnitTest\bin\Debug\netcoreapp2.1\CoverletSourceRootsMapping

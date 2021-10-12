@@ -2,6 +2,123 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.1": {
+      "Microsoft.ApplicationInsights/2.18.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Diagnostics.DiagnosticSource": "5.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.ApplicationInsights.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.ApplicationInsights.dll": {}
+        }
+      },
+      "Microsoft.ApplicationInsights.AspNetCore/2.18.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.ApplicationInsights": "2.18.0",
+          "Microsoft.ApplicationInsights.DependencyCollector": "2.18.0",
+          "Microsoft.ApplicationInsights.EventCounterCollector": "2.18.0",
+          "Microsoft.ApplicationInsights.PerfCounterCollector": "2.18.0",
+          "Microsoft.ApplicationInsights.WindowsServer": "2.18.0",
+          "Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel": "2.18.0",
+          "Microsoft.AspNetCore.Hosting": "2.1.1",
+          "Microsoft.AspNetCore.Http": "2.1.22",
+          "Microsoft.Extensions.Configuration.Json": "2.1.0",
+          "Microsoft.Extensions.Logging.ApplicationInsights": "2.18.0",
+          "System.Text.Encodings.Web": "4.5.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.ApplicationInsights.AspNetCore.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.ApplicationInsights.AspNetCore.dll": {}
+        }
+      },
+      "Microsoft.ApplicationInsights.DependencyCollector/2.18.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.ApplicationInsights": "2.18.0",
+          "System.Diagnostics.DiagnosticSource": "5.0.0",
+          "System.Diagnostics.StackTrace": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AI.DependencyCollector.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AI.DependencyCollector.dll": {}
+        },
+        "build": {
+          "build/_._": {}
+        }
+      },
+      "Microsoft.ApplicationInsights.EventCounterCollector/2.18.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.ApplicationInsights": "2.18.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AI.EventCounterCollector.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AI.EventCounterCollector.dll": {}
+        }
+      },
+      "Microsoft.ApplicationInsights.PerfCounterCollector/2.18.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.ApplicationInsights": "2.18.0",
+          "Microsoft.Extensions.Caching.Memory": "1.0.0",
+          "System.Diagnostics.PerformanceCounter": "4.7.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AI.PerfCounterCollector.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AI.PerfCounterCollector.dll": {}
+        },
+        "build": {
+          "build/_._": {}
+        }
+      },
+      "Microsoft.ApplicationInsights.WindowsServer/2.18.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.ApplicationInsights": "2.18.0",
+          "Microsoft.ApplicationInsights.DependencyCollector": "2.18.0",
+          "Microsoft.ApplicationInsights.PerfCounterCollector": "2.18.0",
+          "Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel": "2.18.0",
+          "System.Diagnostics.DiagnosticSource": "5.0.0",
+          "System.Runtime.Serialization.Json": "4.3.0",
+          "System.Runtime.Serialization.Primitives": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AI.WindowsServer.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AI.WindowsServer.dll": {}
+        },
+        "build": {
+          "build/_._": {}
+        }
+      },
+      "Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel/2.18.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.ApplicationInsights": "2.18.0",
+          "System.IO.FileSystem.AccessControl": "4.7.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AI.ServerTelemetryChannel.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AI.ServerTelemetryChannel.dll": {}
+        },
+        "build": {
+          "build/_._": {}
+        }
+      },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
         "type": "package",
         "dependencies": {
@@ -628,7 +745,7 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.Html.Abstractions.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Http/2.1.1": {
+      "Microsoft.AspNetCore.Http/2.1.22": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNetCore.Http.Abstractions": "2.1.1",
@@ -704,10 +821,11 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.Http.Extensions.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Http.Features/2.1.1": {
+      "Microsoft.AspNetCore.Http.Features/6.0.0-preview.4.21253.5": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "2.1.1"
+          "Microsoft.Extensions.Primitives": "6.0.0-preview.4.21253.7",
+          "System.IO.Pipelines": "6.0.0-preview.4.21253.7"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {}
@@ -1122,7 +1240,7 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.Razor.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Razor.Design/2.1.2": {
+      "Microsoft.AspNetCore.Razor.Design/2.2.0": {
         "type": "package",
         "build": {
           "build/netstandard2.0/Microsoft.AspNetCore.Razor.Design.props": {}
@@ -2128,6 +2246,19 @@
           "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
         }
       },
+      "Microsoft.Extensions.Logging.ApplicationInsights/2.18.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.ApplicationInsights": "2.18.0",
+          "Microsoft.Extensions.Logging": "2.1.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.ApplicationInsights.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.ApplicationInsights.dll": {}
+        }
+      },
       "Microsoft.Extensions.Logging.Configuration/2.1.1": {
         "type": "package",
         "dependencies": {
@@ -2229,11 +2360,10 @@
           "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {}
         }
       },
-      "Microsoft.Extensions.Primitives/2.1.1": {
+      "Microsoft.Extensions.Primitives/6.0.0-preview.4.21253.7": {
         "type": "package",
         "dependencies": {
-          "System.Memory": "4.5.1",
-          "System.Runtime.CompilerServices.Unsafe": "4.5.1"
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0-preview.4.21253.7"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll": {}
@@ -2560,7 +2690,7 @@
           "Microsoft.NETCore.DotNetAppHost": "2.1.0"
         }
       },
-      "Microsoft.NETCore.Platforms/2.1.0": {
+      "Microsoft.NETCore.Platforms/3.1.0": {
         "type": "package",
         "compile": {
           "lib/netstandard1.0/_._": {}
@@ -2578,11 +2708,11 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Win32.Registry/4.5.0": {
+      "Microsoft.Win32.Registry/4.7.0": {
         "type": "package",
         "dependencies": {
-          "System.Security.AccessControl": "4.5.0",
-          "System.Security.Principal.Windows": "4.5.0"
+          "System.Security.AccessControl": "4.7.0",
+          "System.Security.Principal.Windows": "4.7.0"
         },
         "compile": {
           "ref/netstandard2.0/Microsoft.Win32.Registry.dll": {}
@@ -2972,6 +3102,19 @@
           "lib/netcoreapp2.0/_._": {}
         }
       },
+      "System.Configuration.ConfigurationManager/4.7.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.Cryptography.ProtectedData": "4.7.0",
+          "System.Security.Permissions": "4.7.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll": {}
+        }
+      },
       "System.Console/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -3033,8 +3176,11 @@
           "ref/netstandard1.3/System.Diagnostics.Debug.dll": {}
         }
       },
-      "System.Diagnostics.DiagnosticSource/4.5.0": {
+      "System.Diagnostics.DiagnosticSource/5.0.0": {
         "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "5.0.0"
+        },
         "compile": {
           "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
         },
@@ -3069,6 +3215,27 @@
           }
         }
       },
+      "System.Diagnostics.PerformanceCounter/4.7.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "3.1.0",
+          "Microsoft.Win32.Registry": "4.7.0",
+          "System.Configuration.ConfigurationManager": "4.7.0",
+          "System.Security.Principal.Windows": "4.7.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Diagnostics.PerformanceCounter.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Diagnostics.PerformanceCounter.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp2.0/System.Diagnostics.PerformanceCounter.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "System.Diagnostics.StackTrace/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -3078,7 +3245,7 @@
           "System.Runtime": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.3/_._": {}
+          "ref/netstandard1.3/System.Diagnostics.StackTrace.dll": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Diagnostics.StackTrace.dll": {}
@@ -3266,6 +3433,25 @@
           "ref/netstandard1.3/System.IO.FileSystem.dll": {}
         }
       },
+      "System.IO.FileSystem.AccessControl/4.7.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.AccessControl": "4.7.0",
+          "System.Security.Principal.Windows": "4.7.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.IO.FileSystem.AccessControl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.IO.FileSystem.AccessControl.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/System.IO.FileSystem.AccessControl.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "System.IO.FileSystem.Primitives/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -3278,13 +3464,13 @@
           "lib/netstandard1.3/System.IO.FileSystem.Primitives.dll": {}
         }
       },
-      "System.IO.Pipelines/4.5.0": {
+      "System.IO.Pipelines/6.0.0-preview.4.21253.7": {
         "type": "package",
         "compile": {
-          "ref/netstandard1.3/System.IO.Pipelines.dll": {}
+          "ref/netcoreapp2.0/System.IO.Pipelines.dll": {}
         },
         "runtime": {
-          "lib/netcoreapp2.1/System.IO.Pipelines.dll": {}
+          "lib/netstandard2.0/System.IO.Pipelines.dll": {}
         }
       },
       "System.Linq/4.3.0": {
@@ -3611,7 +3797,7 @@
           "ref/netstandard1.5/System.Runtime.dll": {}
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/4.5.1": {
+      "System.Runtime.CompilerServices.Unsafe/6.0.0-preview.4.21253.7": {
         "type": "package",
         "compile": {
           "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
@@ -3699,6 +3885,20 @@
           "lib/netstandard1.3/System.Runtime.Numerics.dll": {}
         }
       },
+      "System.Runtime.Serialization.Json/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO": "4.3.0",
+          "System.Private.DataContractSerialization": "4.3.0",
+          "System.Runtime": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.0/System.Runtime.Serialization.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Runtime.Serialization.Json.dll": {}
+        }
+      },
       "System.Runtime.Serialization.Primitives/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -3729,11 +3929,11 @@
           "lib/netstandard1.3/System.Runtime.Serialization.Xml.dll": {}
         }
       },
-      "System.Security.AccessControl/4.5.0": {
+      "System.Security.AccessControl/4.7.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "2.0.0",
-          "System.Security.Principal.Windows": "4.5.0"
+          "Microsoft.NETCore.Platforms": "3.1.0",
+          "System.Security.Principal.Windows": "4.7.0"
         },
         "compile": {
           "ref/netstandard2.0/System.Security.AccessControl.dll": {}
@@ -3944,6 +4144,21 @@
           "lib/netstandard1.3/System.Security.Cryptography.Primitives.dll": {}
         }
       },
+      "System.Security.Cryptography.ProtectedData/4.7.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "System.Security.Cryptography.X509Certificates/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -4000,10 +4215,10 @@
           "lib/netstandard2.0/System.Security.Cryptography.Xml.dll": {}
         }
       },
-      "System.Security.Permissions/4.5.0": {
+      "System.Security.Permissions/4.7.0": {
         "type": "package",
         "dependencies": {
-          "System.Security.AccessControl": "4.5.0"
+          "System.Security.AccessControl": "4.7.0"
         },
         "compile": {
           "ref/netstandard2.0/System.Security.Permissions.dll": {}
@@ -4024,10 +4239,10 @@
           "lib/netstandard1.0/System.Security.Principal.dll": {}
         }
       },
-      "System.Security.Principal.Windows/4.5.0": {
+      "System.Security.Principal.Windows/4.7.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "2.0.0"
+          "Microsoft.NETCore.Platforms": "3.1.0"
         },
         "compile": {
           "ref/netstandard2.0/System.Security.Principal.Windows.dll": {}
@@ -4036,11 +4251,11 @@
           "lib/netstandard2.0/System.Security.Principal.Windows.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/unix/lib/netcoreapp2.0/System.Security.Principal.Windows.dll": {
+          "runtimes/unix/lib/netcoreapp2.1/System.Security.Principal.Windows.dll": {
             "assetType": "runtime",
             "rid": "unix"
           },
-          "runtimes/win/lib/netcoreapp2.0/System.Security.Principal.Windows.dll": {
+          "runtimes/win/lib/netcoreapp2.1/System.Security.Principal.Windows.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -4088,7 +4303,7 @@
           "ref/netstandard1.3/System.Text.Encoding.Extensions.dll": {}
         }
       },
-      "System.Text.Encodings.Web/4.5.0": {
+      "System.Text.Encodings.Web/4.5.1": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/System.Text.Encodings.Web.dll": {}
@@ -4349,9 +4564,11 @@
       },
       "ASC.DataAccess/1.0.0": {
         "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
           "ASC.Models": "1.0.0",
-          "ASC.Utilities": "1.0.0"
+          "ASC.Utilities": "1.0.0",
+          "WindowsAzure.Storage": "9.3.3"
         },
         "compile": {
           "bin/placeholder/ASC.DataAccess.dll": {}
@@ -4362,6 +4579,10 @@
       },
       "ASC.Models/1.0.0": {
         "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "WindowsAzure.Storage": "9.3.3"
+        },
         "compile": {
           "bin/placeholder/ASC.Models.dll": {}
         },
@@ -4371,6 +4592,11 @@
       },
       "ASC.Utilities/1.0.0": {
         "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "6.0.0-preview.4.21253.5",
+          "Newtonsoft.Json": "13.0.1"
+        },
         "compile": {
           "bin/placeholder/ASC.Utilities.dll": {}
         },
@@ -4381,6 +4607,148 @@
     }
   },
   "libraries": {
+    "Microsoft.ApplicationInsights/2.18.0": {
+      "sha512": "milJB3VOCoC4EWmpE/Co9cOJ7SV6Ji6VqV4Rf5UlqL9QCg+rAX1y+3Y+j1Gu/j4IExYiPq7SEKqkP2BFnEu6Vw==",
+      "type": "package",
+      "path": "microsoft.applicationinsights/2.18.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net452/Microsoft.ApplicationInsights.dll",
+        "lib/net452/Microsoft.ApplicationInsights.pdb",
+        "lib/net452/Microsoft.ApplicationInsights.xml",
+        "lib/net46/Microsoft.ApplicationInsights.dll",
+        "lib/net46/Microsoft.ApplicationInsights.pdb",
+        "lib/net46/Microsoft.ApplicationInsights.xml",
+        "lib/netstandard2.0/Microsoft.ApplicationInsights.dll",
+        "lib/netstandard2.0/Microsoft.ApplicationInsights.pdb",
+        "lib/netstandard2.0/Microsoft.ApplicationInsights.xml",
+        "microsoft.applicationinsights.2.18.0.nupkg.sha512",
+        "microsoft.applicationinsights.nuspec"
+      ]
+    },
+    "Microsoft.ApplicationInsights.AspNetCore/2.18.0": {
+      "sha512": "QTKpEu2cJzAE6wgy36X+smLqqWdDE1TqK5PIKQ8fO20hgqydEbqjOpLy+OB2+f71YmDUeeUkFEVjIlMEErX0/g==",
+      "type": "package",
+      "path": "microsoft.applicationinsights.aspnetcore/2.18.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net461/Microsoft.ApplicationInsights.AspNetCore.dll",
+        "lib/net461/Microsoft.ApplicationInsights.AspNetCore.pdb",
+        "lib/net461/Microsoft.ApplicationInsights.AspNetCore.xml",
+        "lib/netstandard2.0/Microsoft.ApplicationInsights.AspNetCore.dll",
+        "lib/netstandard2.0/Microsoft.ApplicationInsights.AspNetCore.pdb",
+        "lib/netstandard2.0/Microsoft.ApplicationInsights.AspNetCore.xml",
+        "microsoft.applicationinsights.aspnetcore.2.18.0.nupkg.sha512",
+        "microsoft.applicationinsights.aspnetcore.nuspec"
+      ]
+    },
+    "Microsoft.ApplicationInsights.DependencyCollector/2.18.0": {
+      "sha512": "Rj6lAcPEK46rCF1fqwhDDLCGqqLzuDcbEhlfsLVv7lBX3CFXkoPyYXUpUp6dlXeNl4UdViZLkpXHo4nLVZoGCg==",
+      "type": "package",
+      "path": "microsoft.applicationinsights.dependencycollector/2.18.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Microsoft.ApplicationInsights.DependencyCollector.targets",
+        "content/ApplicationInsights.config.install.xdt",
+        "content/ApplicationInsights.config.transform",
+        "content/ApplicationInsights.config.uninstall.xdt",
+        "icon.png",
+        "lib/net452/Microsoft.AI.DependencyCollector.dll",
+        "lib/net452/Microsoft.AI.DependencyCollector.pdb",
+        "lib/net452/Microsoft.AI.DependencyCollector.xml",
+        "lib/netstandard2.0/Microsoft.AI.DependencyCollector.dll",
+        "lib/netstandard2.0/Microsoft.AI.DependencyCollector.pdb",
+        "lib/netstandard2.0/Microsoft.AI.DependencyCollector.xml",
+        "microsoft.applicationinsights.dependencycollector.2.18.0.nupkg.sha512",
+        "microsoft.applicationinsights.dependencycollector.nuspec"
+      ]
+    },
+    "Microsoft.ApplicationInsights.EventCounterCollector/2.18.0": {
+      "sha512": "t+A160RIlJB0JnEaHFI2qeF0KdsqZLTT1dF8Wy1xzHWX3EguHkGJbQYSWy7VbIEwOzF+AcHHLwYhQastDm/MCA==",
+      "type": "package",
+      "path": "microsoft.applicationinsights.eventcountercollector/2.18.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/netstandard2.0/Microsoft.AI.EventCounterCollector.dll",
+        "lib/netstandard2.0/Microsoft.AI.EventCounterCollector.pdb",
+        "lib/netstandard2.0/Microsoft.AI.EventCounterCollector.xml",
+        "microsoft.applicationinsights.eventcountercollector.2.18.0.nupkg.sha512",
+        "microsoft.applicationinsights.eventcountercollector.nuspec"
+      ]
+    },
+    "Microsoft.ApplicationInsights.PerfCounterCollector/2.18.0": {
+      "sha512": "2sUfSyJ16h2VPsJLbQUl1NjtY0xZBDT03O4qA16HbVsaiIu2elIXfwmfH+uJKgdY65r62QRtRrKgGmyIL/o6hA==",
+      "type": "package",
+      "path": "microsoft.applicationinsights.perfcountercollector/2.18.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Microsoft.ApplicationInsights.PerfCounterCollector.targets",
+        "content/ApplicationInsights.config.install.xdt",
+        "content/ApplicationInsights.config.transform",
+        "content/ApplicationInsights.config.uninstall.xdt",
+        "icon.png",
+        "lib/net452/Microsoft.AI.PerfCounterCollector.dll",
+        "lib/net452/Microsoft.AI.PerfCounterCollector.pdb",
+        "lib/net452/Microsoft.AI.PerfCounterCollector.xml",
+        "lib/netstandard2.0/Microsoft.AI.PerfCounterCollector.dll",
+        "lib/netstandard2.0/Microsoft.AI.PerfCounterCollector.pdb",
+        "lib/netstandard2.0/Microsoft.AI.PerfCounterCollector.xml",
+        "microsoft.applicationinsights.perfcountercollector.2.18.0.nupkg.sha512",
+        "microsoft.applicationinsights.perfcountercollector.nuspec"
+      ]
+    },
+    "Microsoft.ApplicationInsights.WindowsServer/2.18.0": {
+      "sha512": "RviW2xai6hHELJV9ojEZLfwB7PsTTMrZnQmaPux5d7YzDDAkcuaiyR+Tm+AQua5ydJdYF9Q05CkTknxbVO36PQ==",
+      "type": "package",
+      "path": "microsoft.applicationinsights.windowsserver/2.18.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Microsoft.ApplicationInsights.WindowsServer.targets",
+        "content/ApplicationInsights.config.install.xdt",
+        "content/ApplicationInsights.config.transform",
+        "content/ApplicationInsights.config.uninstall.xdt",
+        "icon.png",
+        "lib/net452/Microsoft.AI.WindowsServer.dll",
+        "lib/net452/Microsoft.AI.WindowsServer.pdb",
+        "lib/net452/Microsoft.AI.WindowsServer.xml",
+        "lib/netstandard2.0/Microsoft.AI.WindowsServer.dll",
+        "lib/netstandard2.0/Microsoft.AI.WindowsServer.pdb",
+        "lib/netstandard2.0/Microsoft.AI.WindowsServer.xml",
+        "microsoft.applicationinsights.windowsserver.2.18.0.nupkg.sha512",
+        "microsoft.applicationinsights.windowsserver.nuspec"
+      ]
+    },
+    "Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel/2.18.0": {
+      "sha512": "OUZrvX1SpcpB5VlPRb7Q2TYR8Sb+i1N5g2tkeFeTZnbp9klWRCyZtvIzuCoz+kIrPbw7NiDbQ/SW8Pqi+WUWDQ==",
+      "type": "package",
+      "path": "microsoft.applicationinsights.windowsserver.telemetrychannel/2.18.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.targets",
+        "content/ApplicationInsights.config.install.xdt",
+        "content/ApplicationInsights.config.transform",
+        "content/ApplicationInsights.config.uninstall.xdt",
+        "icon.png",
+        "lib/net452/Microsoft.AI.ServerTelemetryChannel.dll",
+        "lib/net452/Microsoft.AI.ServerTelemetryChannel.pdb",
+        "lib/net452/Microsoft.AI.ServerTelemetryChannel.xml",
+        "lib/netstandard2.0/Microsoft.AI.ServerTelemetryChannel.dll",
+        "lib/netstandard2.0/Microsoft.AI.ServerTelemetryChannel.pdb",
+        "lib/netstandard2.0/Microsoft.AI.ServerTelemetryChannel.xml",
+        "microsoft.applicationinsights.windowsserver.telemetrychannel.2.18.0.nupkg.sha512",
+        "microsoft.applicationinsights.windowsserver.telemetrychannel.nuspec"
+      ]
+    },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "sha512": "owAlEIUZXWSnkK8Z1c+zR47A0X6ykF4XjbPok4lQKNuciUfHLGPd6QnI+rt/8KlQ17PmF+I4S3f+m+Qe4IvViw==",
       "type": "package",
@@ -4830,16 +5198,16 @@
         "microsoft.aspnetcore.html.abstractions.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Http/2.1.1": {
-      "sha512": "pPDcCW8spnyibK3krpxrOpaFHf5fjV6k1Hsl6gfh77N/8gRYlLU7MOQDUnjpEwdlHmtxwJKQJNxZqVQOmJGRUw==",
+    "Microsoft.AspNetCore.Http/2.1.22": {
+      "sha512": "+Blk++1JWqghbl8+3azQmKhiNZA5wAepL9dY2I6KVmu2Ri07MAcvAVC888qUvO7yd7xgRgZOMfihezKg14O/2A==",
       "type": "package",
-      "path": "microsoft.aspnetcore.http/2.1.1",
+      "path": "microsoft.aspnetcore.http/2.1.22",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Microsoft.AspNetCore.Http.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Http.xml",
-        "microsoft.aspnetcore.http.2.1.1.nupkg.sha512",
+        "microsoft.aspnetcore.http.2.1.22.nupkg.sha512",
         "microsoft.aspnetcore.http.nuspec"
       ]
     },
@@ -4897,16 +5265,22 @@
         "microsoft.aspnetcore.http.extensions.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Http.Features/2.1.1": {
-      "sha512": "VklZ7hWgSvHBcDtwYYkdMdI/adlf7ebxTZ9kdzAhX+gUs5jSHE9mZlTamdgf9miSsxc1QjNazHXTDJdVPZKKTw==",
+    "Microsoft.AspNetCore.Http.Features/6.0.0-preview.4.21253.5": {
+      "sha512": "R3MUGcafdytxU9Bv5PWy46MPlHtPLgjCX9ay+Y7VPyvaxtpCijz6tMBUPletOUeAcmyYpwBgWU1FwdyuZn0n8w==",
       "type": "package",
-      "path": "microsoft.aspnetcore.http.features/2.1.1",
+      "path": "microsoft.aspnetcore.http.features/6.0.0-preview.4.21253.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.AspNetCore.Http.Features.dll",
+        "lib/net461/Microsoft.AspNetCore.Http.Features.xml",
+        "lib/net6.0/Microsoft.AspNetCore.Http.Features.dll",
+        "lib/net6.0/Microsoft.AspNetCore.Http.Features.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.xml",
-        "microsoft.aspnetcore.http.features.2.1.1.nupkg.sha512",
+        "microsoft.aspnetcore.http.features.6.0.0-preview.4.21253.5.nupkg.sha512",
         "microsoft.aspnetcore.http.features.nuspec"
       ]
     },
@@ -5281,10 +5655,10 @@
         "microsoft.aspnetcore.razor.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Razor.Design/2.1.2": {
-      "sha512": "fe1+dpy+eM4IX1zodsvkihO1Spuj0NecfStWzvkYoMo7/ziOsqSv4vFK36ZpBfHa4gpdCEwaU46EPzdq+ZDYhQ==",
+    "Microsoft.AspNetCore.Razor.Design/2.2.0": {
+      "sha512": "VLWK+ZtMMNukY6XjxYHc7mz33vkquoEzQJHm/LCF5REVxIaexLr+UTImljRRJBdUDJluDAQwU+59IX0rFDfURA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.razor.design/2.1.2",
+      "path": "microsoft.aspnetcore.razor.design/2.2.0",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -5292,10 +5666,8 @@
         "build/netstandard2.0/Microsoft.AspNetCore.Razor.Design.CodeGeneration.targets",
         "build/netstandard2.0/Microsoft.AspNetCore.Razor.Design.props",
         "buildMultiTargeting/Microsoft.AspNetCore.Razor.Design.props",
-        "microsoft.aspnetcore.razor.design.2.1.2.nupkg.sha512",
+        "microsoft.aspnetcore.razor.design.2.2.0.nupkg.sha512",
         "microsoft.aspnetcore.razor.design.nuspec",
-        "tasks/net46/Microsoft.AspNetCore.Razor.Tasks.dll",
-        "tasks/netstandard2.0/Microsoft.AspNetCore.Razor.Tasks.dll",
         "tools/Microsoft.AspNetCore.Razor.Language.dll",
         "tools/Microsoft.CodeAnalysis.CSharp.dll",
         "tools/Microsoft.CodeAnalysis.Razor.dll",
@@ -6343,6 +6715,21 @@
         "microsoft.extensions.logging.abstractions.nuspec"
       ]
     },
+    "Microsoft.Extensions.Logging.ApplicationInsights/2.18.0": {
+      "sha512": "1PUJtxdeOl3bTkV8gNemmJAXkoXXDmmrWpRWIE6dEod2VcfhxrbUv8wmnf/XEcgqoVWjGNI4ADZpllfcJOkg3A==",
+      "type": "package",
+      "path": "microsoft.extensions.logging.applicationinsights/2.18.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.ApplicationInsights.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.ApplicationInsights.pdb",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.ApplicationInsights.xml",
+        "microsoft.extensions.logging.applicationinsights.2.18.0.nupkg.sha512",
+        "microsoft.extensions.logging.applicationinsights.nuspec"
+      ]
+    },
     "Microsoft.Extensions.Logging.Configuration/2.1.1": {
       "sha512": "Z3AzFM21fL/ux0kZAbTE+HDPQ46vuh0dqzhlBm6w7/029RxZLvV6bUUsAs70i2r4JfShhCjBYZ+bTjR42diFVA==",
       "type": "package",
@@ -6447,16 +6834,23 @@
         "microsoft.extensions.options.configurationextensions.nuspec"
       ]
     },
-    "Microsoft.Extensions.Primitives/2.1.1": {
-      "sha512": "scJ1GZNIxMmjpENh0UZ8XCQ6vzr/LzeF9WvEA51Ix2OQGAs9WPgPu8ABVUdvpKPLuor/t05gm6menJK3PwqOXg==",
+    "Microsoft.Extensions.Primitives/6.0.0-preview.4.21253.7": {
+      "sha512": "6/lDuT2adENTB3xv33imDINOlk12FjhNagH2LCZ0+dc3UNke05DekLz9kSKVQufcvcWbNzzuxO5ucMJ94qQdBQ==",
       "type": "package",
-      "path": "microsoft.extensions.primitives/2.1.1",
+      "path": "microsoft.extensions.primitives/6.0.0-preview.4.21253.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Extensions.Primitives.dll",
+        "lib/net461/Microsoft.Extensions.Primitives.xml",
+        "lib/netcoreapp3.0/Microsoft.Extensions.Primitives.dll",
+        "lib/netcoreapp3.0/Microsoft.Extensions.Primitives.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
-        "microsoft.extensions.primitives.2.1.1.nupkg.sha512",
+        "microsoft.extensions.primitives.6.0.0-preview.4.21253.7.nupkg.sha512",
         "microsoft.extensions.primitives.nuspec"
       ]
     },
@@ -6913,17 +7307,17 @@
         "runtime.json"
       ]
     },
-    "Microsoft.NETCore.Platforms/2.1.0": {
-      "sha512": "ok+RPAtESz/9MUXeIEz6Lv5XAGQsaNmEYXMsgVALj4D7kqC8gveKWXWXbufLySR2fWrwZf8smyN5RmHu0e4BHA==",
+    "Microsoft.NETCore.Platforms/3.1.0": {
+      "sha512": "z7aeg8oHln2CuNulfhiLYxCVMPEwBl3rzicjvIX+4sUuCwvXw5oXQEtbiU2c0z4qYL5L3Kmx0mMA/+t/SbY67w==",
       "type": "package",
-      "path": "microsoft.netcore.platforms/2.1.0",
+      "path": "microsoft.netcore.platforms/3.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/netstandard1.0/_._",
-        "microsoft.netcore.platforms.2.1.0.nupkg.sha512",
+        "microsoft.netcore.platforms.3.1.0.nupkg.sha512",
         "microsoft.netcore.platforms.nuspec",
         "runtime.json",
         "useSharedDesignerContext.txt",
@@ -6947,10 +7341,10 @@
         "version.txt"
       ]
     },
-    "Microsoft.Win32.Registry/4.5.0": {
-      "sha512": "+FWlwd//+Tt56316p00hVePBCouXyEzT86Jb3+AuRotTND0IYn0OO3obs1gnQEs/txEnt+rF2JBGLItTG+Be6A==",
+    "Microsoft.Win32.Registry/4.7.0": {
+      "sha512": "KSrRMb5vNi0CWSGG1++id2ZOs/1QhRqROt+qgbEAdQuGjGrFcl4AOl4/exGPUYz2wUnU42nvJqon1T3U0kPXLA==",
       "type": "package",
-      "path": "microsoft.win32.registry/4.5.0",
+      "path": "microsoft.win32.registry/4.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6958,13 +7352,17 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net46/Microsoft.Win32.Registry.dll",
         "lib/net461/Microsoft.Win32.Registry.dll",
+        "lib/net461/Microsoft.Win32.Registry.xml",
         "lib/netstandard1.3/Microsoft.Win32.Registry.dll",
         "lib/netstandard2.0/Microsoft.Win32.Registry.dll",
-        "microsoft.win32.registry.4.5.0.nupkg.sha512",
+        "lib/netstandard2.0/Microsoft.Win32.Registry.xml",
+        "microsoft.win32.registry.4.7.0.nupkg.sha512",
         "microsoft.win32.registry.nuspec",
         "ref/net46/Microsoft.Win32.Registry.dll",
         "ref/net461/Microsoft.Win32.Registry.dll",
         "ref/net461/Microsoft.Win32.Registry.xml",
+        "ref/net472/Microsoft.Win32.Registry.dll",
+        "ref/net472/Microsoft.Win32.Registry.xml",
         "ref/netstandard1.3/Microsoft.Win32.Registry.dll",
         "ref/netstandard1.3/Microsoft.Win32.Registry.xml",
         "ref/netstandard1.3/de/Microsoft.Win32.Registry.xml",
@@ -6979,10 +7377,13 @@
         "ref/netstandard2.0/Microsoft.Win32.Registry.dll",
         "ref/netstandard2.0/Microsoft.Win32.Registry.xml",
         "runtimes/unix/lib/netstandard2.0/Microsoft.Win32.Registry.dll",
+        "runtimes/unix/lib/netstandard2.0/Microsoft.Win32.Registry.xml",
         "runtimes/win/lib/net46/Microsoft.Win32.Registry.dll",
         "runtimes/win/lib/net461/Microsoft.Win32.Registry.dll",
+        "runtimes/win/lib/net461/Microsoft.Win32.Registry.xml",
         "runtimes/win/lib/netstandard1.3/Microsoft.Win32.Registry.dll",
         "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.dll",
+        "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.xml",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
@@ -7876,6 +8277,29 @@
         "version.txt"
       ]
     },
+    "System.Configuration.ConfigurationManager/4.7.0": {
+      "sha512": "/anOTeSZCNNI2zDilogWrZ8pNqCmYbzGNexUnNhjW8k0sHqEZ2nHJBp147jBV3hGYswu5lINpNg1vxR7bnqvVA==",
+      "type": "package",
+      "path": "system.configuration.configurationmanager/4.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Configuration.ConfigurationManager.dll",
+        "lib/net461/System.Configuration.ConfigurationManager.xml",
+        "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll",
+        "lib/netstandard2.0/System.Configuration.ConfigurationManager.xml",
+        "ref/net461/System.Configuration.ConfigurationManager.dll",
+        "ref/net461/System.Configuration.ConfigurationManager.xml",
+        "ref/netstandard2.0/System.Configuration.ConfigurationManager.dll",
+        "ref/netstandard2.0/System.Configuration.ConfigurationManager.xml",
+        "system.configuration.configurationmanager.4.7.0.nupkg.sha512",
+        "system.configuration.configurationmanager.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Console/4.3.0": {
       "sha512": "DHDrIxiqk1h03m6khKWV2X8p/uvN79rgSqpilL6uzpmSfxfU5ng8VcPtW4qsDsQDHiTv6IPV9TmD5M/vElPNLg==",
       "type": "package",
@@ -8116,26 +8540,29 @@
         "system.diagnostics.debug.nuspec"
       ]
     },
-    "System.Diagnostics.DiagnosticSource/4.5.0": {
-      "sha512": "eIHRELiYDQvsMToML81QFkXEEYXUSUT2F28t1SGrevWqP+epFdw80SyAXIKTXOHrIEXReFOEnEr7XlGiC2GgOg==",
+    "System.Diagnostics.DiagnosticSource/5.0.0": {
+      "sha512": "tCQTzPsGZh/A9LhhA6zrqCRV4hOHsK90/G7q3Khxmn6tnB1PuNU0cRaKANP2AWcF9bn0zsuOoZOSrHuJk6oNBA==",
       "type": "package",
-      "path": "system.diagnostics.diagnosticsource/4.5.0",
+      "path": "system.diagnostics.diagnosticsource/5.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net45/System.Diagnostics.DiagnosticSource.dll",
         "lib/net45/System.Diagnostics.DiagnosticSource.xml",
         "lib/net46/System.Diagnostics.DiagnosticSource.dll",
         "lib/net46/System.Diagnostics.DiagnosticSource.xml",
+        "lib/net5.0/System.Diagnostics.DiagnosticSource.dll",
+        "lib/net5.0/System.Diagnostics.DiagnosticSource.xml",
         "lib/netstandard1.1/System.Diagnostics.DiagnosticSource.dll",
         "lib/netstandard1.1/System.Diagnostics.DiagnosticSource.xml",
         "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll",
         "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.xml",
         "lib/portable-net45+win8+wpa81/System.Diagnostics.DiagnosticSource.dll",
         "lib/portable-net45+win8+wpa81/System.Diagnostics.DiagnosticSource.xml",
-        "system.diagnostics.diagnosticsource.4.5.0.nupkg.sha512",
+        "system.diagnostics.diagnosticsource.5.0.0.nupkg.sha512",
         "system.diagnostics.diagnosticsource.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -8181,6 +8608,45 @@
         "runtimes/win/lib/netstandard1.3/System.Diagnostics.FileVersionInfo.dll",
         "system.diagnostics.fileversioninfo.4.3.0.nupkg.sha512",
         "system.diagnostics.fileversioninfo.nuspec"
+      ]
+    },
+    "System.Diagnostics.PerformanceCounter/4.7.0": {
+      "sha512": "kE9szT4i3TYT9bDE/BPfzg9/BL6enMiZlcUmnUEBrhRtxWvurKoa8qhXkLTRhrxMzBqaDleWlRfIPE02tulU+w==",
+      "type": "package",
+      "path": "system.diagnostics.performancecounter/4.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.Diagnostics.PerformanceCounter.dll",
+        "lib/net461/System.Diagnostics.PerformanceCounter.xml",
+        "lib/netstandard2.0/System.Diagnostics.PerformanceCounter.dll",
+        "lib/netstandard2.0/System.Diagnostics.PerformanceCounter.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net461/System.Diagnostics.PerformanceCounter.dll",
+        "ref/net461/System.Diagnostics.PerformanceCounter.xml",
+        "ref/net472/System.Diagnostics.PerformanceCounter.dll",
+        "ref/net472/System.Diagnostics.PerformanceCounter.xml",
+        "ref/netstandard2.0/System.Diagnostics.PerformanceCounter.dll",
+        "ref/netstandard2.0/System.Diagnostics.PerformanceCounter.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/win/lib/netcoreapp2.0/System.Diagnostics.PerformanceCounter.dll",
+        "runtimes/win/lib/netcoreapp2.0/System.Diagnostics.PerformanceCounter.xml",
+        "system.diagnostics.performancecounter.4.7.0.nupkg.sha512",
+        "system.diagnostics.performancecounter.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Diagnostics.StackTrace/4.3.0": {
@@ -8814,6 +9280,49 @@
         "system.io.filesystem.nuspec"
       ]
     },
+    "System.IO.FileSystem.AccessControl/4.7.0": {
+      "sha512": "vMToiarpU81LR1/KZtnT7VDPvqAZfw9oOS5nY6pPP78nGYz3COLsQH3OfzbR+SjTgltd31R6KmKklz/zDpTmzw==",
+      "type": "package",
+      "path": "system.io.filesystem.accesscontrol/4.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net46/System.IO.FileSystem.AccessControl.dll",
+        "lib/net461/System.IO.FileSystem.AccessControl.dll",
+        "lib/net461/System.IO.FileSystem.AccessControl.xml",
+        "lib/netstandard1.3/System.IO.FileSystem.AccessControl.dll",
+        "lib/netstandard2.0/System.IO.FileSystem.AccessControl.dll",
+        "lib/netstandard2.0/System.IO.FileSystem.AccessControl.xml",
+        "ref/net46/System.IO.FileSystem.AccessControl.dll",
+        "ref/net461/System.IO.FileSystem.AccessControl.dll",
+        "ref/net461/System.IO.FileSystem.AccessControl.xml",
+        "ref/netstandard1.3/System.IO.FileSystem.AccessControl.dll",
+        "ref/netstandard1.3/System.IO.FileSystem.AccessControl.xml",
+        "ref/netstandard1.3/de/System.IO.FileSystem.AccessControl.xml",
+        "ref/netstandard1.3/es/System.IO.FileSystem.AccessControl.xml",
+        "ref/netstandard1.3/fr/System.IO.FileSystem.AccessControl.xml",
+        "ref/netstandard1.3/it/System.IO.FileSystem.AccessControl.xml",
+        "ref/netstandard1.3/ja/System.IO.FileSystem.AccessControl.xml",
+        "ref/netstandard1.3/ko/System.IO.FileSystem.AccessControl.xml",
+        "ref/netstandard1.3/ru/System.IO.FileSystem.AccessControl.xml",
+        "ref/netstandard1.3/zh-hans/System.IO.FileSystem.AccessControl.xml",
+        "ref/netstandard1.3/zh-hant/System.IO.FileSystem.AccessControl.xml",
+        "ref/netstandard2.0/System.IO.FileSystem.AccessControl.dll",
+        "ref/netstandard2.0/System.IO.FileSystem.AccessControl.xml",
+        "runtimes/win/lib/net46/System.IO.FileSystem.AccessControl.dll",
+        "runtimes/win/lib/net461/System.IO.FileSystem.AccessControl.dll",
+        "runtimes/win/lib/net461/System.IO.FileSystem.AccessControl.xml",
+        "runtimes/win/lib/netstandard1.3/System.IO.FileSystem.AccessControl.dll",
+        "runtimes/win/lib/netstandard2.0/System.IO.FileSystem.AccessControl.dll",
+        "runtimes/win/lib/netstandard2.0/System.IO.FileSystem.AccessControl.xml",
+        "system.io.filesystem.accesscontrol.4.7.0.nupkg.sha512",
+        "system.io.filesystem.accesscontrol.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.IO.FileSystem.Primitives/4.3.0": {
       "sha512": "6QOb2XFLch7bEc4lIcJH49nJN2HV+OC3fHDgsLVsBVBk3Y4hFAnOBGzJ2lUu7CyDDFo9IBWkSsnbkT6IBwwiMw==",
       "type": "package",
@@ -8853,26 +9362,28 @@
         "system.io.filesystem.primitives.nuspec"
       ]
     },
-    "System.IO.Pipelines/4.5.0": {
-      "sha512": "1GB2tHmb/qRzCF6NX7+1LU6/IKPt8QKm6hHt7Vmyt/olg3XJIwwRzNwdfG0gKgPzNTIj0eOFk6UpVHrVMDrY0w==",
+    "System.IO.Pipelines/6.0.0-preview.4.21253.7": {
+      "sha512": "vFgm2rr53rp46mFmO+ihwVf9zOZu4sA11ULmCbmvrYEG3XR45ql1CYBSEEsntMQeZG0B/qiOOifnLTxB5G1C0A==",
       "type": "package",
-      "path": "system.io.pipelines/4.5.0",
+      "path": "system.io.pipelines/6.0.0-preview.4.21253.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "lib/netcoreapp2.1/System.IO.Pipelines.dll",
-        "lib/netcoreapp2.1/System.IO.Pipelines.xml",
+        "lib/net461/System.IO.Pipelines.dll",
+        "lib/net461/System.IO.Pipelines.xml",
+        "lib/netcoreapp3.0/System.IO.Pipelines.dll",
+        "lib/netcoreapp3.0/System.IO.Pipelines.xml",
         "lib/netstandard1.3/System.IO.Pipelines.dll",
         "lib/netstandard1.3/System.IO.Pipelines.xml",
         "lib/netstandard2.0/System.IO.Pipelines.dll",
         "lib/netstandard2.0/System.IO.Pipelines.xml",
-        "ref/netstandard1.3/System.IO.Pipelines.dll",
-        "system.io.pipelines.4.5.0.nupkg.sha512",
-        "system.io.pipelines.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "ref/netcoreapp2.0/System.IO.Pipelines.dll",
+        "ref/netcoreapp2.0/System.IO.Pipelines.xml",
+        "system.io.pipelines.6.0.0-preview.4.21253.7.nupkg.sha512",
+        "system.io.pipelines.nuspec"
       ]
     },
     "System.Linq/4.3.0": {
@@ -9972,29 +10483,34 @@
         "system.runtime.nuspec"
       ]
     },
-    "System.Runtime.CompilerServices.Unsafe/4.5.1": {
-      "sha512": "Zh8t8oqolRaFa9vmOZfdQm/qKejdqz0J9kr7o2Fu0vPeoH3BL1EOXipKWwkWtLT1JPzjByrF19fGuFlNbmPpiw==",
+    "System.Runtime.CompilerServices.Unsafe/6.0.0-preview.4.21253.7": {
+      "sha512": "rOTMSKPvs0Wgmne/DaGxFUiD4gcvzzEUvgPtRbJ3MQHVK2wIgNlQUyMPt8Ny6RwzNo5odbfDpwNZy4cfkkc7mA==",
       "type": "package",
-      "path": "system.runtime.compilerservices.unsafe/4.5.1",
+      "path": "system.runtime.compilerservices.unsafe/6.0.0-preview.4.21253.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
+        "lib/net45/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/net45/System.Runtime.CompilerServices.Unsafe.xml",
         "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll",
         "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.xml",
         "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
         "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
         "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
         "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/net461/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/net461/System.Runtime.CompilerServices.Unsafe.xml",
         "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
         "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
         "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
         "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
-        "system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512",
-        "system.runtime.compilerservices.unsafe.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "ref/netstandard2.1/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard2.1/System.Runtime.CompilerServices.Unsafe.xml",
+        "system.runtime.compilerservices.unsafe.6.0.0-preview.4.21253.7.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.nuspec"
       ]
     },
     "System.Runtime.Extensions/4.3.0": {
@@ -10301,6 +10817,65 @@
         "system.runtime.numerics.nuspec"
       ]
     },
+    "System.Runtime.Serialization.Json/4.3.0": {
+      "sha512": "CpVfOH0M/uZ5PH+M9+Gu56K0j9lJw3M+PKRegTkcrY/stOIvRUeonggxNrfBYLA5WOHL2j15KNJuTuld3x4o9w==",
+      "type": "package",
+      "path": "system.runtime.serialization.json/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/System.Runtime.Serialization.Json.dll",
+        "lib/netstandard1.3/System.Runtime.Serialization.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcore50/System.Runtime.Serialization.Json.dll",
+        "ref/netcore50/System.Runtime.Serialization.Json.xml",
+        "ref/netcore50/de/System.Runtime.Serialization.Json.xml",
+        "ref/netcore50/es/System.Runtime.Serialization.Json.xml",
+        "ref/netcore50/fr/System.Runtime.Serialization.Json.xml",
+        "ref/netcore50/it/System.Runtime.Serialization.Json.xml",
+        "ref/netcore50/ja/System.Runtime.Serialization.Json.xml",
+        "ref/netcore50/ko/System.Runtime.Serialization.Json.xml",
+        "ref/netcore50/ru/System.Runtime.Serialization.Json.xml",
+        "ref/netcore50/zh-hans/System.Runtime.Serialization.Json.xml",
+        "ref/netcore50/zh-hant/System.Runtime.Serialization.Json.xml",
+        "ref/netstandard1.0/System.Runtime.Serialization.Json.dll",
+        "ref/netstandard1.0/System.Runtime.Serialization.Json.xml",
+        "ref/netstandard1.0/de/System.Runtime.Serialization.Json.xml",
+        "ref/netstandard1.0/es/System.Runtime.Serialization.Json.xml",
+        "ref/netstandard1.0/fr/System.Runtime.Serialization.Json.xml",
+        "ref/netstandard1.0/it/System.Runtime.Serialization.Json.xml",
+        "ref/netstandard1.0/ja/System.Runtime.Serialization.Json.xml",
+        "ref/netstandard1.0/ko/System.Runtime.Serialization.Json.xml",
+        "ref/netstandard1.0/ru/System.Runtime.Serialization.Json.xml",
+        "ref/netstandard1.0/zh-hans/System.Runtime.Serialization.Json.xml",
+        "ref/netstandard1.0/zh-hant/System.Runtime.Serialization.Json.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.runtime.serialization.json.4.3.0.nupkg.sha512",
+        "system.runtime.serialization.json.nuspec"
+      ]
+    },
     "System.Runtime.Serialization.Primitives/4.3.0": {
       "sha512": "Wz+0KOukJGAlXjtKr+5Xpuxf8+c8739RI1C+A2BoQZT+wMCCoMDDdO8/4IRHfaVINqL78GO8dW8G2lW/e45Mcw==",
       "type": "package",
@@ -10446,10 +11021,10 @@
         "system.runtime.serialization.xml.nuspec"
       ]
     },
-    "System.Security.AccessControl/4.5.0": {
-      "sha512": "vW8Eoq0TMyz5vAG/6ce483x/CP83fgm4SJe5P8Tb1tZaobcvPrbMEL7rhH1DRdrYbbb6F0vq3OlzmK0Pkwks5A==",
+    "System.Security.AccessControl/4.7.0": {
+      "sha512": "JECvTt5aFF3WT3gHpfofL2MNNP6v84sxtXxpqhLBCcDRzqsPBmHhQ6shv4DwwN2tRlzsUxtb3G9M3763rbXKDg==",
       "type": "package",
-      "path": "system.security.accesscontrol/4.5.0",
+      "path": "system.security.accesscontrol/4.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -10457,8 +11032,10 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net46/System.Security.AccessControl.dll",
         "lib/net461/System.Security.AccessControl.dll",
+        "lib/net461/System.Security.AccessControl.xml",
         "lib/netstandard1.3/System.Security.AccessControl.dll",
         "lib/netstandard2.0/System.Security.AccessControl.dll",
+        "lib/netstandard2.0/System.Security.AccessControl.xml",
         "lib/uap10.0.16299/_._",
         "ref/net46/System.Security.AccessControl.dll",
         "ref/net461/System.Security.AccessControl.dll",
@@ -10479,10 +11056,12 @@
         "ref/uap10.0.16299/_._",
         "runtimes/win/lib/net46/System.Security.AccessControl.dll",
         "runtimes/win/lib/net461/System.Security.AccessControl.dll",
+        "runtimes/win/lib/net461/System.Security.AccessControl.xml",
         "runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.dll",
+        "runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.xml",
         "runtimes/win/lib/netstandard1.3/System.Security.AccessControl.dll",
         "runtimes/win/lib/uap10.0.16299/_._",
-        "system.security.accesscontrol.4.5.0.nupkg.sha512",
+        "system.security.accesscontrol.4.7.0.nupkg.sha512",
         "system.security.accesscontrol.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -10782,6 +11361,51 @@
         "system.security.cryptography.primitives.nuspec"
       ]
     },
+    "System.Security.Cryptography.ProtectedData/4.7.0": {
+      "sha512": "ehYW0m9ptxpGWvE4zgqongBVWpSDU/JCFD4K7krxkQwSz/sFQjEXCUqpvencjy6DYDbn7Ig09R8GFffu8TtneQ==",
+      "type": "package",
+      "path": "system.security.cryptography.protecteddata/4.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Security.Cryptography.ProtectedData.dll",
+        "lib/net461/System.Security.Cryptography.ProtectedData.dll",
+        "lib/net461/System.Security.Cryptography.ProtectedData.xml",
+        "lib/netstandard1.3/System.Security.Cryptography.ProtectedData.dll",
+        "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+        "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Security.Cryptography.ProtectedData.dll",
+        "ref/net461/System.Security.Cryptography.ProtectedData.dll",
+        "ref/net461/System.Security.Cryptography.ProtectedData.xml",
+        "ref/netstandard1.3/System.Security.Cryptography.ProtectedData.dll",
+        "ref/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+        "ref/netstandard2.0/System.Security.Cryptography.ProtectedData.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/win/lib/net46/System.Security.Cryptography.ProtectedData.dll",
+        "runtimes/win/lib/net461/System.Security.Cryptography.ProtectedData.dll",
+        "runtimes/win/lib/net461/System.Security.Cryptography.ProtectedData.xml",
+        "runtimes/win/lib/netstandard1.3/System.Security.Cryptography.ProtectedData.dll",
+        "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+        "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.xml",
+        "system.security.cryptography.protecteddata.4.7.0.nupkg.sha512",
+        "system.security.cryptography.protecteddata.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Security.Cryptography.X509Certificates/4.3.0": {
       "sha512": "t2Tmu6Y2NtJ2um0RtcuhP7ZdNNxXEgUm2JeoA/0NvlMjAhKCnM1NX07TDl3244mVp3QU6LPEhT3HTtH1uF7IYw==",
       "type": "package",
@@ -10859,22 +11483,28 @@
         "version.txt"
       ]
     },
-    "System.Security.Permissions/4.5.0": {
-      "sha512": "9gdyuARhUR7H+p5CjyUB/zPk7/Xut3wUSP8NJQB6iZr8L3XUXTMdoLeVAg9N4rqF8oIpE7MpdqHdDHQ7XgJe0g==",
+    "System.Security.Permissions/4.7.0": {
+      "sha512": "dkOV6YYVBnYRa15/yv004eCGRBVADXw8qRbbNiCn/XpdJSUXkkUeIvdvFHkvnko4CdKMqG8yRHC4ox83LSlMsQ==",
       "type": "package",
-      "path": "system.security.permissions/4.5.0",
+      "path": "system.security.permissions/4.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net461/System.Security.Permissions.dll",
+        "lib/net461/System.Security.Permissions.xml",
+        "lib/netcoreapp3.0/System.Security.Permissions.dll",
+        "lib/netcoreapp3.0/System.Security.Permissions.xml",
         "lib/netstandard2.0/System.Security.Permissions.dll",
+        "lib/netstandard2.0/System.Security.Permissions.xml",
         "ref/net461/System.Security.Permissions.dll",
         "ref/net461/System.Security.Permissions.xml",
+        "ref/netcoreapp3.0/System.Security.Permissions.dll",
+        "ref/netcoreapp3.0/System.Security.Permissions.xml",
         "ref/netstandard2.0/System.Security.Permissions.dll",
         "ref/netstandard2.0/System.Security.Permissions.xml",
-        "system.security.permissions.4.5.0.nupkg.sha512",
+        "system.security.permissions.4.7.0.nupkg.sha512",
         "system.security.permissions.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -10939,10 +11569,10 @@
         "system.security.principal.nuspec"
       ]
     },
-    "System.Security.Principal.Windows/4.5.0": {
-      "sha512": "U77HfRXlZlOeIXd//Yoj6Jnk8AXlbeisf1oq1os+hxOGVnuG+lGSfGqTwTZBoORFF6j/0q7HXIl8cqwQ9aUGqQ==",
+    "System.Security.Principal.Windows/4.7.0": {
+      "sha512": "ojD0PX0XhneCsUbAZVKdb7h/70vyYMDYs85lwEI+LngEONe/17A0cFaRFqZU+sOEidcVswYWikYOQ9PPfjlbtQ==",
       "type": "package",
-      "path": "system.security.principal.windows/4.5.0",
+      "path": "system.security.principal.windows/4.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -10950,12 +11580,16 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net46/System.Security.Principal.Windows.dll",
         "lib/net461/System.Security.Principal.Windows.dll",
+        "lib/net461/System.Security.Principal.Windows.xml",
         "lib/netstandard1.3/System.Security.Principal.Windows.dll",
         "lib/netstandard2.0/System.Security.Principal.Windows.dll",
+        "lib/netstandard2.0/System.Security.Principal.Windows.xml",
         "lib/uap10.0.16299/_._",
         "ref/net46/System.Security.Principal.Windows.dll",
         "ref/net461/System.Security.Principal.Windows.dll",
         "ref/net461/System.Security.Principal.Windows.xml",
+        "ref/netcoreapp3.0/System.Security.Principal.Windows.dll",
+        "ref/netcoreapp3.0/System.Security.Principal.Windows.xml",
         "ref/netstandard1.3/System.Security.Principal.Windows.dll",
         "ref/netstandard1.3/System.Security.Principal.Windows.xml",
         "ref/netstandard1.3/de/System.Security.Principal.Windows.xml",
@@ -10971,12 +11605,19 @@
         "ref/netstandard2.0/System.Security.Principal.Windows.xml",
         "ref/uap10.0.16299/_._",
         "runtimes/unix/lib/netcoreapp2.0/System.Security.Principal.Windows.dll",
+        "runtimes/unix/lib/netcoreapp2.0/System.Security.Principal.Windows.xml",
+        "runtimes/unix/lib/netcoreapp2.1/System.Security.Principal.Windows.dll",
+        "runtimes/unix/lib/netcoreapp2.1/System.Security.Principal.Windows.xml",
         "runtimes/win/lib/net46/System.Security.Principal.Windows.dll",
         "runtimes/win/lib/net461/System.Security.Principal.Windows.dll",
+        "runtimes/win/lib/net461/System.Security.Principal.Windows.xml",
         "runtimes/win/lib/netcoreapp2.0/System.Security.Principal.Windows.dll",
+        "runtimes/win/lib/netcoreapp2.0/System.Security.Principal.Windows.xml",
+        "runtimes/win/lib/netcoreapp2.1/System.Security.Principal.Windows.dll",
+        "runtimes/win/lib/netcoreapp2.1/System.Security.Principal.Windows.xml",
         "runtimes/win/lib/netstandard1.3/System.Security.Principal.Windows.dll",
         "runtimes/win/lib/uap10.0.16299/_._",
-        "system.security.principal.windows.4.5.0.nupkg.sha512",
+        "system.security.principal.windows.4.7.0.nupkg.sha512",
         "system.security.principal.windows.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -11166,10 +11807,10 @@
         "system.text.encoding.extensions.nuspec"
       ]
     },
-    "System.Text.Encodings.Web/4.5.0": {
-      "sha512": "Xg4G4Indi4dqP1iuAiMSwpiWS54ZghzR644OtsRCm/m/lBMG8dUBhLVN7hLm8NNrNTR+iGbshCPTwrvxZPlm4g==",
+    "System.Text.Encodings.Web/4.5.1": {
+      "sha512": "8lfETN/1lu0QD+XQaDCxn6InX3KYJHCFO6Iqrm92zn9eOEeonTuyisKxW0nLZfse598LibhEItiRdPzVn8Beyg==",
       "type": "package",
-      "path": "system.text.encodings.web/4.5.0",
+      "path": "system.text.encodings.web/4.5.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -11179,7 +11820,7 @@
         "lib/netstandard1.0/System.Text.Encodings.Web.xml",
         "lib/netstandard2.0/System.Text.Encodings.Web.dll",
         "lib/netstandard2.0/System.Text.Encodings.Web.xml",
-        "system.text.encodings.web.4.5.0.nupkg.sha512",
+        "system.text.encodings.web.4.5.1.nupkg.sha512",
         "system.text.encodings.web.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -11956,8 +12597,10 @@
     ".NETCoreApp,Version=v2.1": [
       "ASC.DataAccess >= 1.0.0",
       "ASC.Models >= 1.0.0",
+      "ASC.Utilities >= 1.0.0",
+      "Microsoft.ApplicationInsights.AspNetCore >= 2.18.0",
       "Microsoft.AspNetCore.App >= 2.1.1",
-      "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
+      "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.1.0",
       "Newtonsoft.Json >= 13.0.1",
       "WindowsAzure.Storage >= 9.3.3"
@@ -11995,6 +12638,9 @@
             },
             "D:\\Frameword core\\ASC\\ASC.Models\\ASC.Models.csproj": {
               "projectPath": "D:\\Frameword core\\ASC\\ASC.Models\\ASC.Models.csproj"
+            },
+            "D:\\Frameword core\\ASC\\ASC.Utilities\\ASC.Utilities.csproj": {
+              "projectPath": "D:\\Frameword core\\ASC\\ASC.Utilities\\ASC.Utilities.csproj"
             }
           }
         }
@@ -12009,6 +12655,10 @@
       "netcoreapp2.1": {
         "targetAlias": "netcoreapp2.1",
         "dependencies": {
+          "Microsoft.ApplicationInsights.AspNetCore": {
+            "target": "Package",
+            "version": "[2.18.0, )"
+          },
           "Microsoft.AspNetCore.App": {
             "suppressParent": "All",
             "target": "Package",
@@ -12018,7 +12668,7 @@
           "Microsoft.AspNetCore.Razor.Design": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[2.1.2, )"
+            "version": "[2.2.0, )"
           },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
@@ -12045,8 +12695,29 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package version outside of dependency constraint: Microsoft.AspNetCore.App 2.1.1 requires Microsoft.AspNetCore.Razor.Design (>= 2.1.1 && < 2.2.0) but version Microsoft.AspNetCore.Razor.Design 2.2.0 was resolved.",
+      "libraryId": "Microsoft.AspNetCore.Razor.Design",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.1"
+      ]
+    },
+    {
+      "code": "NU1107",
+      "level": "Error",
+      "message": "Version conflict detected for Microsoft.AspNetCore.Http.Features. Install/reference Microsoft.AspNetCore.Http.Features 6.0.0-preview.4.21253.5 directly to project ASC.WebCore to resolve this issue. \r\n ASC.WebCore -> ASC.Utilities -> Microsoft.AspNetCore.Http.Features (>= 6.0.0-preview.4.21253.5) \r\n ASC.WebCore -> Microsoft.AspNetCore.App 2.1.1 -> Microsoft.AspNetCore.Http.Features (>= 2.1.1 && < 2.2.0).",
+      "libraryId": "Microsoft.AspNetCore.Http.Features",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.1"
+      ]
+    }
+  ]
 }

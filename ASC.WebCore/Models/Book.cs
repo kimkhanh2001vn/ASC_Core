@@ -1,4 +1,5 @@
 ﻿using ASC.Models;
+using ASC.Models.BaseTypes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,6 @@ namespace ASC.WebCore.Models
         {
             this.RowKey = bookId.ToString();
             this.PartitionKey = publisher;
-
         }
         public int BookId { get; set; }
         public string BookName { get; set; }

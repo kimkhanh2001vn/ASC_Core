@@ -2,7 +2,6 @@
 using Microsoft.WindowsAzure.Storage.Table;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,14 +9,14 @@ namespace ASC.DataAccess
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private bool disposed;
+        //private bool disposed;
         private bool complete;
         private Dictionary<string, object> _repositories;
         public Queue<Task<Action>> RollbackActions { get; set; }
         public string ConnectionString { get; set; }
         public UnitOfWork(string connectionstring)
         {
-            connectionstring = ConnectionString;
+            ConnectionString = connectionstring;
             RollbackActions = new Queue<Task<Action>>();
         }
         public void CommitTransaction()
@@ -67,10 +66,10 @@ namespace ASC.DataAccess
             var type = typeof(T).Name;
             if (_repositories.ContainsKey(type)) return (IReponsitory<T>)_repositories[type];
             var repositoryType = typeof(Reponsitory<>);
-            var repositoryInstance =
-            Activator.CreateInstance(repositoryType
-            .MakeGenericType(typeof(T)), this);
+            var repositoryInstance = Activator.CreateInstance(repositoryType.MakeGenericType(typeof(T)), this);
+
             _repositories.Add(type, repositoryInstance);
+
             return (IReponsitory<T>)_repositories[type];
 
             //if (_repositories == null)

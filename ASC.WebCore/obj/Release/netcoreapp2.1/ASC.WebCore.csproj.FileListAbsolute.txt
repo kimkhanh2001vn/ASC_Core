@@ -1,0 +1,7 @@
+D:\Frameword core\ASC\ASC.WebCore\obj\Release\netcoreapp2.1\ASC.WebCore.csproj.AssemblyReference.cache
+D:\Frameword core\ASC\ASC.WebCore\obj\Release\netcoreapp2.1\ASC.WebCore.GeneratedMSBuildEditorConfig.editorconfig
+D:\Frameword core\ASC\ASC.WebCore\obj\Release\netcoreapp2.1\ASC.WebCore.AssemblyInfoInputs.cache
+D:\Frameword core\ASC\ASC.WebCore\obj\Release\netcoreapp2.1\ASC.WebCore.AssemblyInfo.cs
+D:\Frameword core\ASC\ASC.WebCore\obj\Release\netcoreapp2.1\ASC.WebCore.csproj.CoreCompileInputs.cache
+D:\Frameword core\ASC\ASC.WebCore\obj\Release\netcoreapp2.1\ASC.WebCore.RazorAssemblyInfo.cache
+D:\Frameword core\ASC\ASC.WebCore\obj\Release\netcoreapp2.1\ASC.WebCore.RazorAssemblyInfo.cs
